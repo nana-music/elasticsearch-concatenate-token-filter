@@ -1,4 +1,4 @@
-package elasticsearch.concatenate;
+package org.elasticsearch.plugin.concatenate;
 
 import java.util.Collection;
 
@@ -10,11 +10,11 @@ import org.elasticsearch.plugins.AbstractPlugin;
 public class ConcatenatePlugin extends AbstractPlugin {
     @Override
     public String name() {
-        return "ConcatenatePlugin";
+        return "concatenate-token-filter";
     }
 
     @Override
     public String description() {
-        return "Plugin that provides a Token Filter that recombines all of the tokens in a token stream back into one.";
+        return "concatenate token filter plugin";
     }
 }

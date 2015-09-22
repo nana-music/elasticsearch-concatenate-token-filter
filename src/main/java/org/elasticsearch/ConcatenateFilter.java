@@ -38,37 +38,36 @@ public final class ConcatenateFilter extends TokenFilter {
         boolean empty = false;
         builder.setLength(0);
 
-	if(recheckPrevious) {
-	   restoreState(previousState);
-	   // append the term of the current token
-           builder.append(termAtt.buffer(), 0, termAtt.length());
-           recheckPrevious = false;
-	}
+        if(recheckPrevious) {
+            restoreState(previousState);
+            // append the term of the current token
+            builder.append(termAtt.buffer(), 0, termAtt.length());
+            recheckPrevious = false;
+        }
 
         while (input.incrementToken()) {
-	    if(posIncrAtt.getPositionIncrement() <= incrementGap) {
-                if (builder.length()>0) {
+            if(posIncrAtt.getPositionIncrement() <= incrementGap) {
+                if (builder.length() > 0) {
                     // append the token separator
                     builder.append(tokenSeparator);
                 }
                 // append the term of the current token
                 builder.append(termAtt.buffer(), 0, termAtt.length());
             } else {
-		// we have found a new element in the array, the next token should start from this one
+                // we have found a new element in the array, the next token should start from this one
                 recheckPrevious = true;
-		previousState = captureState();
-	        break;
-	    }
-	}
+                previousState = captureState();
+                break;
+           }
+        }
 
-        if (builder.length()>0) {
+        if (builder.length() > 0) {
             termAtt.setEmpty().append(builder);
-	    if(!recheckPrevious) {
-	        empty = true;
-	    }
+            if(!recheckPrevious) {
+                empty = true;
+            }
         }
 
         return empty;
     }
-
 }
