@@ -1,4 +1,4 @@
-# elasticsearch-concatenate-token-filter
+# Elasticsearch Concatenate Token Filter
 
 Elasticsearch plugin which only provides a Token Filter that merges tokens in a token stream back into one. Taken from http://elasticsearch-users.115913.n3.nabble.com/Is-there-a-concatenation-filter-td3711094.html
 
@@ -21,8 +21,6 @@ The plugin provides a token filter of type `concatenate` which has one parameter
 When saving arrays of strings to a field, these are handled in elasticsearch as separate tokens, so this filter would collapse all the elements of the array into one, and usually you don't want that to happen. As a workaround you can set `position_offset_gap` on the field to a high number and pass the same number as the `increment_gap` parameter to the filter, which then only concatenates all tokens closer than this value.
 
 ## Example
-
-Given the custom analyzer (see https://www.elastic.co/guide/en/elasticsearch/guide/current/custom-analyzers.html)
 
 ```javascript
 {
