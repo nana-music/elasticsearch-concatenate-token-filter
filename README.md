@@ -4,7 +4,7 @@ Elasticsearch plugin which only provides a Token Filter that merges tokens in a 
 
 ## Installation
 
-    bin/plugin -u https://github.com/rinist/elasticsearch-concatenate-token-filter/releases/download/v0.0.1/elasticsearch-concatenate-0.0.1.zip -i concatenate
+    bin/plugin install concatenate --url https://github.com/nana-music/elasticsearch-concatenate-token-filter/releases/download/v0.0.1/elasticsearch-concatenate-0.0.1.zip
 
 ## Version
 
