@@ -28,6 +28,6 @@ public class ConcatenateTokenFilterFactory extends AbstractTokenFilterFactory {
 
     @Override
     public TokenStream create(TokenStream tokenStream) {
-        return new ConcatenateFilter(Version.LUCENE_CURRENT, tokenStream, tokenSeparator, incrementGap);
+        return new ConcatenateFilter(Version.LATEST, tokenStream, tokenSeparator, incrementGap);
     }
 }

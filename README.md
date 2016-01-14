@@ -4,13 +4,14 @@ Elasticsearch plugin which only provides a Token Filter that merges tokens in a 
 
 ## Installation
 
-    bin/plugin install concatenate --url https://github.com/nana-music/elasticsearch-concatenate-token-filter/releases/download/v0.0.1/elasticsearch-concatenate-0.0.1.zip
+    bin/plugin install concatenate --url https://github.com/nana-music/elasticsearch-concatenate-token-filter/releases/download/v1.5.0/elasticsearch-concatenate-1.5.0.zip
 
 ## Version
 
 | Concatenate Token Filter | Elasticsearch |
 |:-------|:-------|
 | 0.0.1  | 1.3.2  |
+| 1.5.0  | 1.5.2  |
 
 ## Usage
 

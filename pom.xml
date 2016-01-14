@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.elasticsearch.plugin.concatenate</groupId>
 	<artifactId>elasticsearch-concatenate-token-filter</artifactId>
-	<version>0.0.1</version>
+	<version>1.5.0</version>
 	<packaging>jar</packaging>
 	<description>Concatenate token filter</description>
 	<inceptionYear>2015</inceptionYear>
@@ -17,7 +17,7 @@
 		</license>
 	</licenses>
 	<properties>
-		<elasticsearch.version>1.3.2</elasticsearch.version>
+		<elasticsearch.version>1.5.2</elasticsearch.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
